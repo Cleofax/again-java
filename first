@@ -1,0 +1,42 @@
+//*******************************************************************
+// Welcome to CompileJava!
+// If you experience any issues, please contact us ('More Info')  -->
+//*******************************************************************
+
+import java.lang.Math; // headers MUST be above the first class
+
+// one class needs to have a main() method
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    Fucker one = new Financer(); //reference as one of the interfaces
+    one.showingOff();
+    OtherClass myObject = new OtherClass("Hello World!");
+    System.out.print(myObject);
+    Fucker.settingUp();
+    //one.settingUp();
+  }
+}
+
+// you can add other public classes to this editor in any order
+public class OtherClass
+{
+  private String message;
+  private boolean answer = false;
+  public OtherClass(String input)
+  {
+    message = "Why, " + input + " Isn't this something? ";
+  }
+  public String toString()
+  {
+    return message;
+  }
+}
+
+// just example of subclasses and interfaces
+interface Fucker{ void showingOff(); public static void settingUp(){System.out.print("Jar333 ");}} 
+interface Prick{ void blamingOthers(); }
+abstract class Person implements Fucker, Prick { abstract public void showingOff(); abstract public void blamingOthers();} //class must be abstract
+class Financer extends Person { public void showingOff(){System.out.print("Jar ");};  public void blamingOthers(){};} 
