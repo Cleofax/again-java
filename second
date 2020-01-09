@@ -1,0 +1,13 @@
+class Cinema {
+private String name;
+//public Cinema(String name) {this.name = name;} // if this is not on comments, them all derived class has to declare constructor with parameters
+public Cinema() {}
+}
+public class Movie extends Cinema {
+public static int Movie(String movie) {return 0;} //always return statement if not void. 
+static int Movie2 (){return 0;}
+  static void Movie3 (){return ;}// even void can have return without a literal
+//void Movie2 (){} // a class cannot contain 2 methods with the same mane
+public static void main(String[] showing) {
+//System.out.print(new Movie("Another Trilogy").name);  // name is private
+} 
