@@ -1,0 +1,27 @@
+public class One1
+{
+  int a = 10;
+  
+  //One1() {One1 var1 = new One1();} This an stack over flow Error example
+  public static void main (String[] args) 
+  
+  {
+    Two2 var1 = new Two2();
+    One1 var2 = new One1();
+    TwoA2a var3 = new TwoB2b();
+    System.out.println ("hey there");
+    System.out.println (var3.saca1());
+  }
+  public static void calling (){Two2 var1 = new Two2();}
+
+}
+ 
+class Two2 
+{
+  Two2() {System.out.println (" hey there2");}
+  //final String saca1() {return "Two2";} a final method cannot overided
+  private final String saca1() {return "Two2";}
+}
+  
+class TwoA2a extends Two2{ String saca1(){return "TwoA2";}}  
+class TwoB2b extends TwoA2a {public final String saca1(){return "TwoB2";}}
