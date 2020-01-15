@@ -1,0 +1,26 @@
+//Sample of Creation of checked exception -Roto1 and how to 
+//Create method throwing exception broke1()
+//Create method catching exeption checkea()
+
+public class HelloWorld{
+
+     public static void main(String []args)
+            {
+        System.out.println("Hello World3");
+         HelloWorld as = new HelloWorld();
+                      as.checkea();
+            }
+            
+              public void checkea()
+              {
+                  try{
+                      HelloWorld a = new HelloWorld();
+                      a.broke1();
+                      
+                  }catch(Exception e){System.out.println("Hello World22");}
+              }
+    public void broke1() throws Roto1 {throw new Roto1();}
+}
+
+class Roto1 extends Exception{final String r1="Roto1";}
+
