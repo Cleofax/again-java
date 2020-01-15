@@ -1,6 +1,9 @@
 //Sample of Creation of checked exception -Roto1 and how to 
 //Create method throwing exception broke1()
 //Create method catching exeption checkea()
+//also comment on doing private a constructor so only internal classes can access to that class
+
+
 
 public class HelloWorld{
 
@@ -22,5 +25,14 @@ public class HelloWorld{
     public void broke1() throws Roto1 {throw new Roto1();}
 }
 
-class Roto1 extends Exception{final String r1="Roto1";}
+class Roto1 extends Exception{
+    final String r1="Roto1";
+   // private Roto1() {System.out.println("Roto2");} if you make private a constructor the class cannot be instantiate
+    public Roto1() {System.out.println("Roto2");}
+}
+
+class Roto2 extends Roto1{
+  //public Roto2(){}
+    
+}
 
