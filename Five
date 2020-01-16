@@ -1,0 +1,16 @@
+// about default values for java variables
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        Try tc = new Try();
+        System.out.println("Hello World");
+        tc.f();
+        System.out.println(tc.b);
+       // int a; it does not works since Their default value is zero when declared 
+       //class members. Local variables don't have default values
+        //System.out.println(a);
+     }
+}
+
+class Try{int a; Object b; void f(){System.out.println(a);System.out.println(b);}}
