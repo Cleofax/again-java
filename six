@@ -1,0 +1,27 @@
+//sample of checked exceptions
+
+public class HelloWorld{
+
+     public static void main  (String []args) throws Err1{//throws exception from test1
+        System.out.println("Hello World II");
+        One a = new One();
+        a.test1();
+     }
+}
+
+class One 
+{
+
+public void test1 () throws Err1
+{
+    One a = new One();
+    try {a.broker();} // try but also throws excpetion for broker
+    catch(Exception Err1){System.out.println("Broken");}
+    
+}    
+public void broker() throws Err1 {throw new Err1();} // Throws exception
+  
+}
+
+
+class Err1 extends Exception{} // Creating new exception
