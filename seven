@@ -1,0 +1,24 @@
+//sample of not checked exceptions
+
+public class HelloWorld{
+
+     public static void main  (String []args) {//do not declare that throws the not checked exception
+        System.out.println("Hello World I\\**8**/I");
+        One a = new One();
+        a.test1();
+     }
+}
+
+class One 
+{
+
+public void test1 () throws RuntimeException //this is not needed
+{
+    One a = new One();
+    try {a.broker();} // try but also throws excpetion for broker
+    catch(Exception e){throw RuntimeException();}
+    
+}    
+public void broker()  {throw new RuntimeException();} // Throws not checked exception
+  
+}
