@@ -1,0 +1,20 @@
+// lambdas are about functional interfaces (wiht just one abstract function)
+// they can be instantiated using the lambda expresion (parameters)-> body of the fuction
+// and then use the instantiated interface and method
+
+public class HelloWorld{
+
+  public static void main(String[] args) {
+	Functional a = (int bc, int cc) -> bc*cc;
+	int b = a.build(5,9);
+	System.out.println (b);
+  
+	Functional2 aa = (int bc) -> bc*bc;
+	int bb = aa.build(84);
+	System.out.println (bb);
+	}
+}
+
+
+interface Functional { int build(int x, int y);}
+interface Functional2 { int build(int x);}
