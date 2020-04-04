@@ -1,0 +1,50 @@
+import java.util.function.*;
+import java.util.*;
+
+public class MyClass 
+{
+    public static void main(String args[]) 
+    {
+    ArrayList<mamal> arr1 = new ArrayList();
+    arr1.add(new mamal("dog",true,true));
+    arr1.add(new mamal("cat",false,true));
+    
+    new MyClass().testerbark(arr1,a->a.barker());
+    new MyClass().testjump(arr1,a->a.jumper());
+    
+    
+    System.out.println("Sum of x+y = ");
+    }
+    
+    void testerbark (ArrayList<mamal> a, Predicate<mamal> b) 
+    
+    {
+        
+        for  (mamal ab:a)
+        {
+            if(b.test(ab)) System.out.println(ab.name + " it is barker");
+            else System.out.println(ab.name + " it is not barker");
+           
+        }
+    }    
+        
+        
+    void testjump (ArrayList<mamal> a, Predicate<mamal> b)
+    {
+        for(mamal ab:a){if (b.test(ab)) System.out.println(ab.name + " it is jumper");
+            else System.out.println(ab.name + " it is not jumper"); }
+    }    
+        
+        
+    
+}
+
+class mamal
+{
+boolean bark;
+boolean jump;
+String name;
+mamal(String a, boolean b, boolean c ){name =a; bark = b; jump=c;}
+boolean barker(){return bark;}
+boolean jumper(){return jump;}
+}
